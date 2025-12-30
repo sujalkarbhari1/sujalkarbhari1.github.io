@@ -1182,20 +1182,6 @@
             });
         });
 
-        // Ensure profile images are high quality
-        document.addEventListener('DOMContentLoaded', function() {
-            const heroImg = document.getElementById('hero-profile-img');
-            const navImg = document.getElementById('nav-profile-img');
-            
-            // Use higher quality GitHub avatar URLs
-            if (heroImg && heroImg.src.includes('github.com')) {
-                heroImg.src = 'https://avatars.githubusercontent.com/u/92311758?s=400&v=4';
-            }
-            
-            if (navImg && navImg.src.includes('github.com')) {
-                navImg.src = 'https://avatars.githubusercontent.com/u/92311758?s=100&v=4';
-            }
-        });
     </script>
 </body>
 </html>
