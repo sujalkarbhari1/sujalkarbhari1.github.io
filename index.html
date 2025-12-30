@@ -69,6 +69,7 @@
             border: 3px solid var(--secondary);
             object-fit: cover;
             transition: transform 0.3s;
+            background-color: #f0f0f0;
         }
 
         .nav-profile-img:hover {
@@ -150,7 +151,8 @@
             object-fit: cover;
             box-shadow: 0 15px 40px rgba(0,0,0,0.25);
             transition: all 0.3s ease;
-            background: white;
+            background: #f0f0f0;
+            color: transparent; /* Hide alt text when image loads */
         }
 
         .github-profile-img:hover {
@@ -232,6 +234,16 @@
         .cta-button.secondary:hover {
             background: var(--secondary);
             color: white;
+        }
+
+        /* Image placeholder styles */
+        .img-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
         }
 
         /* Sections */
@@ -779,10 +791,11 @@
         <div class="container">
             <nav>
                <a href="#" class="logo">
-                    <img id="nav-profile-img" src="https://avatars.githubusercontent.com/u/92311758?v=4" 
+                    <img id="nav-profile-img" src="https://i.imgur.com/placeholder-avatar.png" 
                          alt="Sujal Karbhari" 
-                         class="nav-profile-img"
-                         onerror="this.src='https://ui-avatars.com/api/?name=SK&background=2d74da&color=fff&bold=true&size=45'">
+                         class="nav-profile-img img-placeholder"
+                         data-src="https://avatars.githubusercontent.com/u/92311758?v=4"
+                         data-fallback="https://ui-avatars.com/api/?name=SK&background=2d74da&color=fff&bold=true&size=45">
                     Sujal<span>Karbhari</span>
                 </a>
                 <div class="mobile-menu">
@@ -806,10 +819,11 @@
             <div class="hero-content">
                 <div class="profile-img-container">
                   <img id="hero-profile-img" 
-                         src="https://avatars.githubusercontent.com/u/92311758?v=4" 
+                         src="https://i.imgur.com/placeholder-avatar-large.png" 
                          alt="Sujal Karbhari" 
-                         class="github-profile-img"
-                         onerror="this.src='https://ui-avatars.com/api/?name=Sujal+Karbhari&background=2d74da&color=fff&bold=true&size=220'">
+                         class="github-profile-img img-placeholder"
+                         data-src="https://avatars.githubusercontent.com/u/92311758?v=4"
+                         data-fallback="https://ui-avatars.com/api/?name=Sujal+Karbhari&background=2d74da&color=fff&bold=true&size=220&font-size=0.5">
                 </div>
                 <div class="hero-tag">Data Analyst</div>
                 <h1>Sujal Karbhari</h1>
@@ -951,7 +965,7 @@
                         <ul class="project-achievements">
                             <li>Analyzed store data with MySQL and Excel, identifying top products and segments to drive a 15% sales increase in key categories.</li>
                             <li>Built Power BI dashboards for monitoring order trends and customer behavior, improving business visibility.</li>
-                            <li>•	Optimized delivery logistics and inventory based on insights, reducing delivery time by 10% and enhancing customer satisfaction.</li>
+                            <li>Optimized delivery logistics and inventory based on insights, reducing delivery time by 10% and enhancing customer satisfaction.</li>
                         </ul>
                         <div class="project-results">
                             <div class="result-item">
@@ -1106,95 +1120,4 @@
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
-                        <a href="mailto:karbharisujal1@gmail.com">karbharisujal1@gmail.com</a>
-                    </div>
-                    
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <h3>Phone</h3>
-                        <p>+91-9321691074</p>
-                    </div>
-                    
-                    <div class="footer-contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Location</h3>
-                        <p>Mumbai, India</p>
-                    </div>
-                </div>
-                
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sujal-karbhari-23b00038b/" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/sujalkarbhari1" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:karbharisujal1@gmail.com" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <h2>Sujal Karbhari</h2>
-            <p style="margin-bottom: 10px;">Data Analyst | Business Intelligence | Data Visualization</p>
-            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 20px;">Proactive Data Analyst skilled in SQL, Power BI, and Excel with hands-on experience in ETL workflows and dashboard design</p>
-            
-            <div class="copyright">
-                <p>&copy; <span id="current-year">2024</span> Sujal Karbhari. All rights reserved.</p>
-                <p style="font-size: 0.9rem; margin-top: 5px;">Portfolio designed for Data Analyst roles</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Ensure profile images are high quality
-        document.addEventListener('DOMContentLoaded', function() {
-            const heroImg = document.getElementById('hero-profile-img');
-            const navImg = document.getElementById('nav-profile-img');
-            
-            // Use higher quality GitHub avatar URLs
-            if (heroImg && heroImg.src.includes('github.com')) {
-                heroImg.src = 'https://avatars.githubusercontent.com/u/92311758?s=400&v=4';
-            }
-            
-            if (navImg && navImg.src.includes('github.com')) {
-                navImg.src = 'https://avatars.githubusercontent.com/u/92311758?s=100&v=4';
-            }
-        });
-    </script>
-</body>
-</html>
+                        <a href="mailto:karbharisujal1@gmail.com">
