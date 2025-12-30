@@ -69,7 +69,12 @@
             border: 3px solid var(--secondary);
             object-fit: cover;
             transition: transform 0.3s;
-            background-color: #f0f0f0;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
         }
 
         .nav-profile-img:hover {
@@ -151,8 +156,13 @@
             object-fit: cover;
             box-shadow: 0 15px 40px rgba(0,0,0,0.25);
             transition: all 0.3s ease;
-            background: #f0f0f0;
-            color: transparent; /* Hide alt text when image loads */
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            font-size: 3.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .github-profile-img:hover {
@@ -234,16 +244,6 @@
         .cta-button.secondary:hover {
             background: var(--secondary);
             color: white;
-        }
-
-        /* Image placeholder styles */
-        .img-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
         }
 
         /* Sections */
@@ -772,6 +772,7 @@
             .github-profile-img {
                 width: 180px;
                 height: 180px;
+                font-size: 2.8rem;
             }
 
             .profile-img-container::after {
@@ -791,11 +792,10 @@
         <div class="container">
             <nav>
                <a href="#" class="logo">
-                    <img id="nav-profile-img" src="https://i.imgur.com/placeholder-avatar.png" 
-                         alt="Sujal Karbhari" 
-                         class="nav-profile-img img-placeholder"
-                         data-src="https://avatars.githubusercontent.com/u/92311758?v=4"
-                         data-fallback="https://ui-avatars.com/api/?name=SK&background=2d74da&color=fff&bold=true&size=45">
+                    <!-- Using initials as fallback instead of external image -->
+                    <div class="nav-profile-img">
+                        SK
+                    </div>
                     Sujal<span>Karbhari</span>
                 </a>
                 <div class="mobile-menu">
@@ -818,12 +818,10 @@
         <div class="container">
             <div class="hero-content">
                 <div class="profile-img-container">
-                  <img id="hero-profile-img" 
-                         src="https://i.imgur.com/placeholder-avatar-large.png" 
-                         alt="Sujal Karbhari" 
-                         class="github-profile-img img-placeholder"
-                         data-src="https://avatars.githubusercontent.com/u/92311758?v=4"
-                         data-fallback="https://ui-avatars.com/api/?name=Sujal+Karbhari&background=2d74da&color=fff&bold=true&size=220&font-size=0.5">
+                    <!-- Using initials instead of external image -->
+                    <div class="github-profile-img">
+                        SK
+                    </div>
                 </div>
                 <div class="hero-tag">Data Analyst</div>
                 <h1>Sujal Karbhari</h1>
@@ -1120,4 +1118,128 @@
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
-                        <a href="mailto:karbharisujal1@gmail.com">
+                        <a href="mailto:karbharisujal1@gmail.com">karbharisujal1@gmail.com</a>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+91-9321691074</p>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Mumbai, India</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/sujal-karbhari-23b00038b/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/sujalkarbhari1" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:karbharisujal1@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>Sujal Karbhari</h2>
+            <p style="margin-bottom: 10px;">Data Analyst | Business Intelligence | Data Visualization</p>
+            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 20px;">Proactive Data Analyst skilled in SQL, Power BI, and Excel with hands-on experience in ETL workflows and dashboard design</p>
+            
+            <div class="copyright">
+                <p>&copy; <span id="current-year">2024</span> Sujal Karbhari. All rights reserved.</p>
+                <p style="font-size: 0.9rem; margin-top: 5px;">Portfolio designed for Data Analyst roles</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Try to load an actual image if available
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create a test image to see if external images are accessible
+            const testImage = new Image();
+            testImage.src = 'https://avatars.githubusercontent.com/u/92311758?v=4';
+            
+            testImage.onload = function() {
+                // If image loads successfully, replace placeholders
+                const heroImg = document.querySelector('.github-profile-img');
+                const navImg = document.querySelector('.nav-profile-img');
+                
+                if (heroImg && heroImg.classList.contains('github-profile-img')) {
+                    // Create actual image element
+                    const img = document.createElement('img');
+                    img.src = this.src;
+                    img.alt = 'Sujal Karbhari';
+                    img.className = 'github-profile-img';
+                    img.style.width = '220px';
+                    img.style.height = '220px';
+                    img.style.borderRadius = '50%';
+                    img.style.objectFit = 'cover';
+                    img.style.border = '6px solid var(--secondary)';
+                    img.style.boxShadow = '0 15px 40px rgba(0,0,0,0.25)';
+                    
+                    // Replace placeholder with actual image
+                    heroImg.parentNode.replaceChild(img, heroImg);
+                }
+                
+                if (navImg && navImg.classList.contains('nav-profile-img')) {
+                    const img = document.createElement('img');
+                    img.src = this.src;
+                    img.alt = 'Sujal Karbhari';
+                    img.className = 'nav-profile-img';
+                    img.style.width = '45px';
+                    img.style.height = '45px';
+                    img.style.borderRadius = '50%';
+                    img.style.objectFit = 'cover';
+                    img.style.border = '3px solid var(--secondary)';
+                    
+                    navImg.parentNode.replaceChild(img, navImg);
+                }
+            };
+            
+            testImage.onerror = function() {
+                console.log('External images blocked, using stylish initials instead');
+            };
+        });
+    </script>
+</body>
+</html>
