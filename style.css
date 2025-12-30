@@ -1,60 +1,90 @@
+* { box-sizing: border-box; }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f6f8;
-    color: #333;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
-header {
-    background: #0a66c2;
-    color: white;
-    padding: 40px;
-    text-align: center;
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #020617;
 }
 
-.btn {
-    background: white;
-    color: #0a66c2;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+nav a {
+  color: #94a3b8;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero-buttons a {
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+}
+
+.hero-buttons .outline {
+  background: transparent;
+  border: 1px solid #2563eb;
+}
+
+.kpis {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.kpis div {
+  background: #020617;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 section {
-    padding: 40px;
-    max-width: 900px;
-    margin: auto;
+  padding: 80px 60px;
 }
 
-h2 {
-    color: #0a66c2;
+.project-card {
+  background: #020617;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 10px 15px;
+  margin: 8px;
+  border-radius: 20px;
 }
 
-.skills li {
-    background: #e1ecf4;
-    padding: 8px 15px;
-    border-radius: 20px;
-    list-style: none;
-}
-
-.project {
-    background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
+.links a {
+  margin-right: 20px;
+  color: #2563eb;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
+  text-align: center;
+  padding: 30px;
+  background: #020617;
 }
+
 
