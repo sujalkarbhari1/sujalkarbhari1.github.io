@@ -33,12 +33,51 @@
             padding: 0 20px;
         }
 
+        /* Top Contact Bar */
+        .contact-bar {
+            background: var(--dark);
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-details {
+            display: flex;
+            gap: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item i {
+            color: var(--secondary);
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary);
+        }
+
         /* Header & Navigation */
         header {
             background: var(--primary);
             color: white;
             padding: 1rem 0;
-            position: fixed;
+            position: sticky;
             width: 100%;
             top: 0;
             z-index: 1000;
@@ -56,6 +95,17 @@
             font-weight: 700;
             color: white;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--secondary);
+            object-fit: cover;
         }
 
         .logo span {
@@ -94,6 +144,26 @@
             background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
             color: white;
             text-align: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-container {
+            margin-bottom: 30px;
+        }
+
+        .large-profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--secondary);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .hero-content h1 {
@@ -225,12 +295,12 @@
 
         .project-img {
             height: 200px;
-            background: #ddd;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: var(--primary);
+            color: white;
         }
 
         .project-content {
@@ -346,6 +416,17 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
             .nav-links {
                 display: none;
                 position: absolute;
@@ -374,6 +455,11 @@
                 font-size: 2.5rem;
             }
 
+            .large-profile-img {
+                width: 150px;
+                height: 150px;
+            }
+
             .about-content {
                 flex-direction: column;
             }
@@ -385,11 +471,36 @@
     </style>
 </head>
 <body>
+    <!-- Top Contact Bar -->
+    <div class="contact-bar">
+        <div class="container">
+            <div class="contact-info">
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:karbharisuja1@gmail.com">karbharisuja1@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/sujalkarbhari1" target="_blank">github.com/sujalkarbhari1</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/sujal-karbhari" target="_blank">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">Sujal<span>Karbhari</span></a>
+                <a href="#" class="logo">
+                    <img id="nav-profile-img" src="" alt="Profile" class="profile-img" onerror="this.src='https://via.placeholder.com/40'">
+                    <span>Sujal</span>Karbhari
+                </a>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -407,9 +518,12 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="profile-container">
+                    <img id="hero-profile-img" src="" alt="Sujal Karbhari" class="large-profile-img" onerror="this.src='https://via.placeholder.com/180'">
+                </div>
                 <h1>Sujal Karbhari</h1>
                 <h2>Full Stack Developer</h2>
-                <p>I'm a passionate developer with expertise in creating web applications. Explore my projects and GitHub contributions below.</p>
+                <p>Passionate developer with expertise in creating web applications. Explore my projects and GitHub contributions below.</p>
                 <div>
                     <a href="#projects" class="cta-button">View My Work</a>
                     <a href="https://github.com/sujalkarbhari1" target="_blank" class="cta-button secondary">
@@ -429,8 +543,8 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Hello! I'm Sujal Karbhari</h3>
-                    <p>I'm a developer with experience in building web applications and working with various technologies. My GitHub profile showcases my journey and projects I've worked on.</p>
-                    <p>I enjoy solving problems through code and continuously learning new technologies to improve my skills.</p>
+                    <p>I'm a passionate developer with experience in building web applications and working with various technologies. My GitHub profile showcases my journey and projects I've worked on.</p>
+                    <p>I enjoy solving problems through code and continuously learning new technologies to improve my skills. Always excited to work on challenging projects that push my boundaries.</p>
                     
                     <h3 style="margin-top: 30px;">Skills & Technologies</h3>
                     <div class="skills">
@@ -439,9 +553,11 @@
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">Node.js</span>
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Git & GitHub</span>
                         <span class="skill-tag">API Development</span>
                         <span class="skill-tag">Database Design</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Problem Solving</span>
                     </div>
                 </div>
             </div>
@@ -463,10 +579,10 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Project Loading...</h3>
+                        <h3>Loading Projects...</h3>
                         <p>Fetching projects from GitHub...</p>
                         <div class="project-links">
-                            <a href="#" class="project-link" target="_blank">
+                            <a href="#" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
@@ -496,7 +612,7 @@
                     <div class="stat-item">
                         <i class="fas fa-calendar-alt"></i>
                         <div class="stat-number" id="year-count">0</div>
-                        <p>Years Coding</p>
+                        <p>Years on GitHub</p>
                     </div>
                 </div>
             </div>
@@ -515,14 +631,21 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <p>sujalkarbhari1@gmail.com</p>
+                            <p><a href="mailto:karbharisuja1@gmail.com" style="color: var(--primary); text-decoration: none;">karbharisuja1@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
                         <div>
                             <h3>GitHub</h3>
-                            <p>github.com/sujalkarbhari1</p>
+                            <p><a href="https://github.com/sujalkarbhari1" target="_blank" style="color: var(--primary); text-decoration: none;">github.com/sujalkarbhari1</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://linkedin.com/in/sujal-karbhari" target="_blank" style="color: var(--primary); text-decoration: none;">linkedin.com/in/sujal-karbhari</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -546,30 +669,18 @@
                 <a href="https://github.com/sujalkarbhari1" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://linkedin.com/in/sujal-karbhari" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="#" target="_blank">
-                    <i class="fab fa-twitter"></i>
+                <a href="mailto:karbharisuja1@gmail.com">
+                    <i class="fas fa-envelope"></i>
                 </a>
             </div>
-            <p>&copy; 2023 Sujal Karbhari. All rights reserved.</p>
+            <p>&copy; <span id="current-year">2024</span> Sujal Karbhari. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-
         // GitHub API Integration
         async function fetchGitHubData() {
             try {
@@ -578,6 +689,10 @@
                 // Fetch user data
                 const userResponse = await fetch(`https://api.github.com/users/${username}`);
                 const userData = await userResponse.json();
+                
+                // Set profile images
+                document.getElementById('hero-profile-img').src = userData.avatar_url;
+                document.getElementById('nav-profile-img').src = userData.avatar_url;
                 
                 // Fetch repositories
                 const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
@@ -599,7 +714,7 @@
                 }
                 document.getElementById('language-count').textContent = languages.size;
                 
-                // Calculate years coding (from account creation)
+                // Calculate years on GitHub (from account creation)
                 const createdYear = new Date(userData.created_at).getFullYear();
                 const currentYear = new Date().getFullYear();
                 document.getElementById('year-count').textContent = currentYear - createdYear;
@@ -611,45 +726,73 @@
                 // Display up to 6 most recent projects
                 const displayRepos = reposData.slice(0, 6);
                 
-                displayRepos.forEach(repo => {
-                    const projectCard = document.createElement('div');
-                    projectCard.className = 'project-card';
-                    
-                    // Determine icon based on language
-                    let icon = 'fas fa-code';
-                    if (repo.language) {
-                        if (repo.language.toLowerCase().includes('javascript')) icon = 'fab fa-js';
-                        else if (repo.language.toLowerCase().includes('python')) icon = 'fab fa-python';
-                        else if (repo.language.toLowerCase().includes('java')) icon = 'fab fa-java';
-                        else if (repo.language.toLowerCase().includes('html')) icon = 'fab fa-html5';
-                        else if (repo.language.toLowerCase().includes('css')) icon = 'fab fa-css3';
-                    }
-                    
-                    projectCard.innerHTML = `
-                        <div class="project-img">
-                            <i class="${icon}"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>${repo.name}</h3>
-                            <p>${repo.description || 'No description available'}</p>
-                            <div class="project-links">
-                                <a href="${repo.html_url}" class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i> View Code
-                                </a>
-                                ${repo.homepage ? `<a href="${repo.homepage}" class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>` : ''}
+                if (displayRepos.length === 0) {
+                    projectsGrid.innerHTML = `
+                        <div class="project-card">
+                            <div class="project-img">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="project-content">
+                                <h3>No Public Repositories</h3>
+                                <p>Check back soon for new projects!</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/sujalkarbhari1" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i> Visit GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     `;
-                    
-                    projectsGrid.appendChild(projectCard);
-                });
+                } else {
+                    displayRepos.forEach(repo => {
+                        const projectCard = document.createElement('div');
+                        projectCard.className = 'project-card';
+                        
+                        // Determine icon based on language
+                        let icon = 'fas fa-code';
+                        if (repo.language) {
+                            const lang = repo.language.toLowerCase();
+                            if (lang.includes('javascript')) icon = 'fab fa-js';
+                            else if (lang.includes('python')) icon = 'fab fa-python';
+                            else if (lang.includes('java')) icon = 'fab fa-java';
+                            else if (lang.includes('html')) icon = 'fab fa-html5';
+                            else if (lang.includes('css')) icon = 'fab fa-css3';
+                            else if (lang.includes('react')) icon = 'fab fa-react';
+                            else if (lang.includes('node')) icon = 'fab fa-node-js';
+                        }
+                        
+                        projectCard.innerHTML = `
+                            <div class="project-img">
+                                <i class="${icon}"></i>
+                            </div>
+                            <div class="project-content">
+                                <h3>${repo.name.replace(/-/g, ' ').replace(/_/g, ' ')}</h3>
+                                <p>${repo.description || 'No description available'}</p>
+                                <div class="project-links">
+                                    <a href="${repo.html_url}" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i> View Code
+                                    </a>
+                                    ${repo.homepage ? `<a href="${repo.homepage}" class="project-link" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>` : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        projectsGrid.appendChild(projectCard);
+                    });
+                }
                 
             } catch (error) {
                 console.error('Error fetching GitHub data:', error);
                 
-                // Fallback: Display sample projects if API fails
+                // Set fallback stats
+                document.getElementById('repo-count').textContent = '10+';
+                document.getElementById('star-count').textContent = '5+';
+                document.getElementById('language-count').textContent = '5+';
+                document.getElementById('year-count').textContent = '1+';
+                
+                // Show sample projects if API fails
                 const projectsGrid = document.querySelector('.projects-grid');
                 projectsGrid.innerHTML = `
                     <div class="project-card">
@@ -681,14 +824,40 @@
                         </div>
                     </div>
                 `;
-                
-                // Set fallback stats
-                document.getElementById('repo-count').textContent = '10+';
-                document.getElementById('star-count').textContent = '5+';
-                document.getElementById('language-count').textContent = '5+';
-                document.getElementById('year-count').textContent = '1+';
             }
         }
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
         // Initialize when page loads
         document.addEventListener('DOMContentLoaded', fetchGitHubData);
