@@ -143,10 +143,14 @@
         }
 
         .github-profile-img {
-          width: 180px;
-          height: 180px;
-          border-radius: 50%;
-          object-fit: cover;  
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 6px solid var(--secondary);
+            object-fit: cover;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            background: white;
         }
 
         .github-profile-img:hover {
@@ -775,13 +779,11 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">
-                    <img
-  src="https://avatars.githubusercontent.com/u/92311758"
-  alt="Sujal Karbhari"
-  class="github-profile-img"
-  referrerpolicy="no-referrer"
-/>
-                    Sujal<span>Karbhari</span>
+                    <img id="nav-profile-img" src="https://avatars.githubusercontent.com/u/92311758?v=4" 
+                         alt="Sujal Karbhari" 
+                         class="nav-profile-img"
+                         onerror="this.src='https://ui-avatars.com/api/?name=SK&background=2d74da&color=fff&bold=true&size=45'">
+                    Data<span>Analyst</span>
                 </a>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -803,17 +805,16 @@
         <div class="container">
             <div class="hero-content">
                 <div class="profile-img-container">
-                <img id="hero-profile-img" 
-                src="https://avatars.githubusercontent.com/u/92311758?s=400" 
-                alt="Sujal Karbhari" 
-                class="github-profile-img"
-                loading="lazy"
-                onerror="this.src='https://ui-avatars.com/api/?name=Sujal+Karbhari&background=2d74da&color=fff&bold=true&size=400'">
+                    <img id="hero-profile-img" 
+                         src="https://avatars.githubusercontent.com/u/92311758?v=4" 
+                         alt="Sujal Karbhari" 
+                         class="github-profile-img"
+                         onerror="this.src='https://ui-avatars.com/api/?name=Sujal+Karbhari&background=2d74da&color=fff&bold=true&size=220'">
                 </div>
                 <div class="hero-tag">Data Analyst</div>
                 <h1>Sujal Karbhari</h1>
                 <h2>Transforming Data into Actionable Insights</h2>
-                <p>Proactive Data Analyst skilled in SQL, Power BI, and Excel. Expertise in ETL workflows and dashboard design to transform complex data into actionable insights that drive strategic decisions and measurable business value.</p>
+                <p>Proactive Data Analyst skilled in SQL, Power BI, and Excel, with hands-on experience building ETL workflows, designing interactive dashboards, and delivering actionable insights. I've successfully optimized supply chain visibility, increased retail sales by 15%, and improved fundraising ROI through data-driven strategies.</p>
                 <div>
                     <a href="#projects" class="cta-button">View My Projects</a>
                     <a href="#contact" class="cta-button secondary">Contact Me</a>
@@ -833,31 +834,31 @@
                 <div class="skill-category">
                     <h3><i class="fas fa-database"></i> Data Analysis</h3>
                     <ul class="skill-list">
-                        <li><span class="skill-name">SQL (MySQL, PostgreSQL)</span> 
-                        <li><span class="skill-name">Python</span> 
-                        <li><span class="skill-name">Excel (Power Query, Pivot Tables)</span> 
-                        <li><span class="skill-name">Data Cleaning & EDA</span> 
-                        <li><span class="skill-name">ETL Workflows</span> 
+                        <li><span class="skill-name">SQL (MySQL, PostgreSQL)</span> <span class="skill-level">Advanced</span></li>
+                        <li><span class="skill-name">Python</span> <span class="skill-level">Intermediate</span></li>
+                        <li><span class="skill-name">Excel (Power Query, Pivot Tables)</span> <span class="skill-level">Advanced</span></li>
+                        <li><span class="skill-name">Data Cleaning & EDA</span> <span class="skill-level">Advanced</span></li>
+                        <li><span class="skill-name">ETL Workflows</span> <span class="skill-level">Intermediate</span></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fas fa-chart-line"></i> Data Visualization</h3>
                     <ul class="skill-list">
-                        <li><span class="skill-name">Power BI</span> 
-                        <li><span class="skill-name">Tableau</span> 
-                        <li><span class="skill-name">Dashboard Design</span>
-                        <li><span class="skill-name">KPI Analysis</span>
-                        <li><span class="skill-name">Data Storytelling</span> 
+                        <li><span class="skill-name">Power BI</span> <span class="skill-level">Advanced</span></li>
+                        <li><span class="skill-name">Tableau</span> <span class="skill-level">Intermediate</span></li>
+                        <li><span class="skill-name">Dashboard Design</span> <span class="skill-level">Advanced</span></li>
+                        <li><span class="skill-name">KPI Analysis</span> <span class="skill-level">Advanced</span></li>
+                        <li><span class="skill-name">Data Storytelling</span> <span class="skill-level">Intermediate</span></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
                     <ul class="skill-list">
-                        <li><span class="skill-name">GitHub</span> 
-                        <li><span class="skill-name">Jupyter Notebook</span> 
-                        <li><span class="skill-name">VS Code</span> 
-                        <li><span class="skill-name">Google Colab</span> 
-                        <li><span class="skill-name">Dashboard Automation</span> 
+                        <li><span class="skill-name">GitHub</span> <span class="skill-level">Intermediate</span></li>
+                        <li><span class="skill-name">Jupyter Notebook</span> <span class="skill-level">Intermediate</span></li>
+                        <li><span class="skill-name">VS Code</span> <span class="skill-level">Intermediate</span></li>
+                        <li><span class="skill-name">Google Colab</span> <span class="skill-level">Intermediate</span></li>
+                        <li><span class="skill-name">Dashboard Automation</span> <span class="skill-level">Intermediate</span></li>
                     </ul>
                 </div>
             </div>
@@ -948,9 +949,9 @@
                     </div>
                     <div class="project-content">
                         <ul class="project-achievements">
-                            <li>Analyzed store data with MySQL and Excel, identifying top products and segments to drive a 15% sales increase in key categories.</li>
-                            <li>Built Power BI dashboards for monitoring order trends and customer behavior, improving business visibility.</li>
-                            <li>•	Optimized delivery logistics and inventory based on insights, reducing delivery time by 10% and enhancing customer satisfaction.</li>
+                            <li>Analyzed online store performance to identify top products and customer segments</li>
+                            <li>Built Power BI dashboards to monitor order trends and customer behavior</li>
+                            <li>Optimized delivery routes and workforce allocation based on data insights</li>
                         </ul>
                         <div class="project-results">
                             <div class="result-item">
@@ -987,8 +988,9 @@
                         <div class="timeline-date">October 2025</div>
                         <div class="timeline-company">Deloitte - Data Analytics Job Simulation</div>
                         <ul class="timeline-achievements">
-                            <li>Cleaned and validated 3+ datasets to improve data quality and integrity for analytics workflows.</li>
-                            <li>Identified anomalies and trends using statistical and forensic techniques to support risk assessment and actionable insights.</li>
+                            <li>Analyzed 3+ structured datasets using data-cleaning and transformation techniques</li>
+                            <li>Identified anomalies and trend patterns across functional domains</li>
+                            <li>Applied statistical analysis to generate actionable insights</li>
                         </ul>
                     </div>
                 </div>
@@ -999,8 +1001,9 @@
                         <div class="timeline-date">December 2025</div>
                         <div class="timeline-company">Tata Consulting Services - Data Visualization Simulation</div>
                         <ul class="timeline-achievements">
-                            <li>Cleaned and validated 3+ datasets to improve data quality and integrity for analytics workflows.</li>
-                            <li>Uncovered trends and inconsistencies in multi-module data, increasing interpretability by 30% through optimized visual design.</li>
+                            <li>Developed 4+ interactive dashboards using data-storytelling principles</li>
+                            <li>Assessed multi-module datasets to uncover trends and inconsistencies</li>
+                            <li>Increased interpretability of findings by 30% through visual design</li>
                         </ul>
                     </div>
                 </div>
@@ -1034,7 +1037,7 @@
                     <div class="education-degree">Bachelor of Science in Information Technology (B.Sc. IT)</div>
                     <div class="education-institution">University of Mumbai</div>
                     <div class="education-details">CGPA: 8.67</div>
-                    <div class="education-duration">June 2022 to May 2025</div>
+                    <div class="education-duration">May 2022 to May 2025</div>
                 </div>
                 
                 <div class="education-card">
@@ -1059,7 +1062,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contact Information</h2>
-                <div class="section-subtitle">Looking for opportunities to start my career in data analytics</div>
+                <div class="section-subtitle">Feel free to reach out for opportunities or collaborations</div>
             </div>
             
             <div class="contact-content">
@@ -1180,6 +1183,20 @@
             });
         });
 
+        // Ensure profile images are high quality
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroImg = document.getElementById('hero-profile-img');
+            const navImg = document.getElementById('nav-profile-img');
+            
+            // Use higher quality GitHub avatar URLs
+            if (heroImg && heroImg.src.includes('github.com')) {
+                heroImg.src = 'https://avatars.githubusercontent.com/u/92311758?s=400&v=4';
+            }
+            
+            if (navImg && navImg.src.includes('github.com')) {
+                navImg.src = 'https://avatars.githubusercontent.com/u/92311758?s=100&v=4';
+            }
+        });
     </script>
 </body>
 </html>
