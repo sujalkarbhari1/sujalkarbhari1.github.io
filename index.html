@@ -12,7 +12,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+          
         :root {
             --primary: #1a365d;
             --secondary: #2d74da;
@@ -688,7 +688,29 @@
                 text-align: center;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             }
+        /* Profile Image Styles */
+.profile-img-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
+.github-profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary);
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.nav-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+    margin-right: 10px;
+    object-fit: cover;
+}
             .nav-links.active {
                 display: flex;
             }
@@ -720,7 +742,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">Data<span>Analyst</span></a>
+                <a href="#" class="logo">Sujal<span>Karbhari</span></a>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -740,6 +762,12 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="profile-img-container">
+    <img src="https://github.com/sujalkarbhari1.png?size=180" 
+         alt="Sujal Karbhari" 
+         class="github-profile-img"
+         onerror="this.src='https://ui-avatars.com/api/?name=Sujal+Karbhari&background=2d74da&color=fff&size=180'">
+</div>
                 <div class="hero-tag">Data Analyst</div>
                 <h1>Sujal Karbhari</h1>
                 <h2>Transforming Data into Actionable Insights</h2>
