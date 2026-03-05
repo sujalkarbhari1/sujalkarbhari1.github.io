@@ -426,7 +426,7 @@ section {
     font-weight: 600;
 }
 
-/* Projects Section */
+/* Projects Section - UPDATED */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -925,7 +925,6 @@ footer {
 }
 </style>
 </head>
-
 <body>
 
 <!-- Floating particles background -->
@@ -970,9 +969,9 @@ footer {
       <span class="hero-badge">Data Analyst</span>
       <h2>Transforming Data into Actionable Insights</h2>
       <p>
-        Proactive Data Analyst skilled in SQL, Power BI, and Excel.
-        Expertise in ETL workflows and dashboard design to transform
-        complex data into actionable insights.
+        Aspiring graduate with strong knowledge in domain of Data Science and Data Analytics.
+        Proficient in transforming complex data into actionable insights to support business decisions. 
+        Detail-oriented, adaptable, and eager to apply technical skills to drive measurable outcomes.
       </p>
       <div class="hero-buttons">
         <a href="https://github.com/sujalkarbhari1" class="cta-button">View My Projects</a>
@@ -1034,7 +1033,7 @@ footer {
     </div>
 </section>
 
-<!-- Projects Section -->
+<!-- Projects Section - UPDATED WITH RESUME PROJECTS -->
 <section id="projects" class="projects">
     <div class="container">
         <div class="section-title">
@@ -1043,97 +1042,93 @@ footer {
         </div>
         
         <div class="projects-grid">
+            <!-- Supply Chain Prediction Model -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3>Supply Chain Data Integration & Analytics</h3>
+                    <h3>Supply Chain Prediction Model</h3>
                     <div class="project-tech">
-                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">FLAML</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <ul class="project-achievements">
+                        <li>Built a modular ML pipeline with automated preprocessing, imbalance handling (SMOTE), and AutoML-driven model selection (XGBoost, 97% accuracy) for late delivery risk prediction.</li>
+                        <li>Orchestrated reproducible ML workflows and uv-based dependency management for scalable experimentation and version control.</li>
+                        <li>Delivered a production-ready Streamlit application to operationalize predictive insights and reduce supply chain disruption risk.</li>
+                    </ul>
+                    <div class="project-results">
+                        <div class="result-item">
+                            <span class="result-label">Model Accuracy</span>
+                            <span class="result-value">97%</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Risk Reduction</span>
+                            <span class="result-value">Significant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supply Chain Business Intelligence Dashboard -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Supply Chain Business Intelligence Dashboard</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
                         <span class="tech-tag">PostgreSQL</span>
                         <span class="tech-tag">Power BI</span>
                     </div>
                 </div>
                 <div class="project-content">
                     <ul class="project-achievements">
-                        <li>Built PostgreSQL database and executed ETL workflows to clean and centralize multi-warehouse supply chain data</li>
-                        <li>Developed interactive Power BI dashboards visualizing 14.5K+ inventory units and order status</li>
-                        <li>Analyzed data across 10 warehouse locations to improve inventory visibility</li>
+                        <li>Analyzed $25M+ sales data, 10K customers, and 50K+ stockout events using PostgreSQL and Python to uncover demand patterns, supplier performance gaps, and inventory risks.</li>
+                        <li>Designed interactive Power BI dashboards with ETL workflows to track key KPIs including return rate (51%), on-time delivery (48.99%), demand forecasting (5M units), and logistics efficiency.</li>
+                        <li>Delivered data-driven insights to optimize inventory planning, reduce stockouts, control logistics costs, and improve overall supply chain performance.</li>
                     </ul>
                     <div class="project-results">
                         <div class="result-item">
-                            <span class="result-label">On-time Delivery Rate</span>
-                            <span class="result-value">96%</span>
+                            <span class="result-label">Sales Data Analyzed</span>
+                            <span class="result-value">$25M+</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Inventory Units</span>
-                            <span class="result-value">14,500+</span>
+                            <span class="result-label">Return Rate</span>
+                            <span class="result-value">51%</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Warehouse Locations</span>
-                            <span class="result-value">10</span>
+                            <span class="result-label">On-time Delivery</span>
+                            <span class="result-value">48.99%</span>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Cement Strength Prediction Model -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3>Fundraising Business Intelligence Model</h3>
+                    <h3>Cement Strength Prediction Model</h3>
                     <div class="project-tech">
-                        <span class="tech-tag">Excel</span>
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Scikit-learn</span>
                     </div>
                 </div>
                 <div class="project-content">
                     <ul class="project-achievements">
-                        <li>Designed BI model to analyze $1.25B+ fundraising campaign data across platforms and regions</li>
-                        <li>Built interactive Power BI dashboards tracking KPIs such as donors, spend, and reach</li>
-                        <li>Identified high-performing regions and platforms for budget optimization</li>
+                        <li>Performed comprehensive EDA and data preprocessing on the cement dataset to identify key factors influencing compressive strength, including cement, water, and aggregate composition.</li>
+                        <li>Evaluated 8 regression models using performance metrics (R², MAE, RMSE), identifying Random Forest as the best-performing model (R² = 0.912).</li>
+                        <li>Improved prediction accuracy by ~14% over baseline Linear Regression through ensemble modeling and hyperparameter tuning, enabling more reliable material strength forecasting.</li>
                     </ul>
                     <div class="project-results">
                         <div class="result-item">
-                            <span class="result-label">Funds Analyzed</span>
-                            <span class="result-value">$1.25B+</span>
+                            <span class="result-label">R² Score</span>
+                            <span class="result-value">0.912</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Reporting Clarity</span>
-                            <span class="result-value">Enhanced</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Marketing ROI</span>
-                            <span class="result-value">Improved</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Online Retail Analytics & Optimization</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Excel</span>
-                        <span class="tech-tag">Power BI</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <ul class="project-achievements">
-                        <li>Analyzed store data with MySQL and Excel, identifying top products and segments to drive a 15% sales increase in key categories.</li>
-                        <li>Built Power BI dashboards for monitoring order trends and customer behavior, improving business visibility.</li>
-                        <li>Optimized delivery logistics and inventory based on insights, reducing delivery time by 10% and enhancing customer satisfaction.</li>
-                    </ul>
-                    <div class="project-results">
-                        <div class="result-item">
-                            <span class="result-label">Sales Increase</span>
-                            <span class="result-value">15%</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Delivery Time</span>
-                            <span class="result-value">Reduced by 10%</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Customer Satisfaction</span>
-                            <span class="result-value">Enhanced</span>
+                            <span class="result-label">Improvement</span>
+                            <span class="result-value">~14%</span>
                         </div>
                     </div>
                 </div>
@@ -1183,7 +1178,7 @@ footer {
                     <ul class="timeline-achievements">
                         <li>IT Vedant Education Pvt. Ltd.</li>
                         <li>Coursework: Excel, MySQL, Power BI, Tableau, Python</li>
-                        <li>Foundation with Certifications from IT Vedant</li>
+                                                <li>Foundation with Certifications from IT Vedant</li>
                     </ul>
                 </div>
             </div>
@@ -1256,14 +1251,8 @@ footer {
                 <h3>GitHub</h3>
                 <a href="https://github.com/sujalkarbhari1" target="_blank">github.com/sujalkarbhari1</a>
             </div>
-        </div>
-        
-        <div class="download-resume">
-            <p style="margin-bottom: 20px; font-size: 1.1rem;">Want to see my detailed resume?</p>
-            <a href="mailto:karbharisujal1@gmail.com?subject=Request for Resume - Data Analyst Position&body=Hello Sujal,%0D%0A%0D%0AI would like to request your detailed resume for a Data Analyst position. Please send it to me at this email address.%0D%0A%0D%0ABest regards," class="cta-button">
-                <i class="fas fa-download"></i> Request Resume
-            </a>
-        </div>
+        </div> 
+       </div>
     </div>
 </section>
 
